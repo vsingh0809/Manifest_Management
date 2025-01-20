@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/working_nav_fragment"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.sko.manifestmanagement.Fragment.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_editGuestFragment"
+            app:destination="@id/editGuestFragment">
+            <argument
+                android:name="guestId"
+                app:argType="integer" /> <!-- Add guestId argument -->
+        </action>
+        <action
+            android:id="@+id/action_homeFragment_to_guestProfile"
+            app:destination="@id/guestProfile">
+             <argument
+                android:name="guestId"
+                app:argType="integer" />
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.sko.manifestmanagement.Fragment.SearchFragment"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search" />
+    <fragment
+        android:id="@+id/addGuestFragment"
+        android:name="com.sko.manifestmanagement.Fragment.AddGuestFragment"
+        android:label="AddGuestFragment" >
+        <action
+            android:id="@+id/action_addGuestFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.sko.manifestmanagement.Fragment.ProfileFragment"
+        android:label="ProfileFragment" >
+        <action
+            android:id="@+id/action_profileFragment_to_changeEmailFragment"
+            app:destination="@id/changeEmailFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_editProfileFragment2"
+            app:destination="@id/editProfileFragment2" />
+        <action
+            android:id="@+id/action_profileFragment_to_changePasswordFragment"
+            app:destination="@id/changePasswordFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/changeEmailFragment"
+        android:name="com.sko.manifestmanagement.Fragment.ChangeEmailFragment"
+        android:label="ChangeEmailFragment" />
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.sko.manifestmanagement.Fragment.LoginFragment"
+        android:label="LoginFragment" />
+    <fragment
+        android:id="@+id/editGuestFragment"
+        android:name="com.sko.manifestmanagement.Fragment.EditGuestFragment"
+        android:label="EditGuestFragment">
+        <argument
+            android:name="guestId"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_editGuestFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editProfileFragment2"
+        android:name="com.sko.manifestmanagement.Fragment.EditProfileFragment"
+        android:label="EditProfileFragment2" >
+        <action
+            android:id="@+id/action_editProfileFragment2_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/changePasswordFragment"
+        android:name="com.sko.manifestmanagement.Fragment.ChangePasswordFragment"
+        android:label="fragment_change_email"
+        tools:layout="@layout/fragment_change_email" >
+        <action
+            android:id="@+id/action_changePasswordFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_changePasswordFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_changePasswordFragment_to_loginFragment2"
+            app:destination="@id/loginFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/guestProfile"
+        android:name="com.sko.manifestmanagement.Fragment.GuestProfile"
+        android:label="GuestProfile" >
+        <action
+            android:id="@+id/action_guestProfile_to_editGuestFragment"
+            app:destination="@id/editGuestFragment" >
+            <argument
+                android:name="guestId"
+                app:argType="integer" />
+        </action>>
+        <action
+            android:id="@+id/action_guestProfile_to_barcodeScannerFragment"
+            app:destination="@id/barcodeScannerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/barcodeScannerFragment"
+        android:name="com.sko.manifestmanagement.Fragment.BarcodeScannerFragment"
+        android:label="fragment_barcode_scanner"
+        tools:layout="@layout/fragment_barcode_scanner" >
+        <argument
+            android:name="guestCheckInStatus"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_barcodeScannerFragment_to_guestProfile"
+            app:destination="@id/guestProfile" />
+    </fragment>
+</navigation>

@@ -1,0 +1,18 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.ManifestManagement" parent="Theme.Material3.DynamicColors.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="bottomNavigationStyle">@style/BottomNavStyle</item>
+    </style>
+
+    <style name="Theme.ManifestManagement" parent="Base.Theme.ManifestManagement" />
+    <style name="BottomNavStyle">
+        <!-- Icon and Text Color -->
+        <item name="itemIconTint">@color/colorPrimary</item> <!-- Icon color -->
+        <item name="itemTextColor">@color/colorPrimary</item> <!-- Text color -->
+
+        <!-- Background Color -->
+        <item name="backgroundTint">@color/white</item> <!-- Background color for the Bottom Navigation Bar -->
+    </style>
+</resources>

@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_for_login"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:context=".Fragment.EditGuestFragment">
+
+        <!-- Edit Guest Title -->
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="143dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:background="#9AA8F4"
+            android:text="Edit Guest"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <!-- First Name -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/firstName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="First Name"
+                android:inputType="textPersonName"
+                android:maxLength="50"
+                android:importantForAccessibility="yes"
+                android:contentDescription="First Name Field" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Last Name -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/lastName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Last Name"
+                android:inputType="textPersonName"
+                android:maxLength="50"
+                android:importantForAccessibility="yes"
+                android:contentDescription="Last Name Field" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Gender -->
+        <TextView
+            android:id="@+id/genderLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gender:"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="5dp"/>
+
+        <RadioGroup
+            android:id="@+id/genderRadioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/radioMale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Male" />
+            <RadioButton
+                android:id="@+id/radioFemale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Female" />
+            <RadioButton
+                android:id="@+id/radioOther"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Other" />
+        </RadioGroup>
+
+
+
+        <!-- Mobile Number -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/mobileNo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Mobile Number"
+                android:inputType="phone"
+                android:maxLength="15"
+                android:importantForAccessibility="yes"
+                android:contentDescription="Mobile Number Field" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Email -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/emailOrCrewName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:contentDescription="Email Field"
+                android:hint="Email Address"
+                android:importantForAccessibility="yes"
+                android:inputType="textEmailAddress"
+                android:maxLength="100"
+                android:enabled="false"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Citizenship -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/citizenship"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Citizenship"
+                android:maxLength="50"
+                android:enabled="false"
+                android:importantForAccessibility="yes"
+                android:contentDescription="Citizenship Field" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Boarding Point -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/boardingPoint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Boarding Point"
+                android:maxLength="100"
+                android:importantForAccessibility="yes"
+                android:contentDescription="Boarding Point Field" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Destination Point -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/destinationPoint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Destination"
+                android:maxLength="100"
+                android:importantForAccessibility="yes"
+                android:contentDescription="Destination Point Field" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Submit Button -->
+        <Button
+            android:id="@+id/submitButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Submit"
+            android:layout_marginTop="24dp"
+            android:importantForAccessibility="yes"
+            android:contentDescription="Submit Button" />
+
+    </LinearLayout>
+</ScrollView>

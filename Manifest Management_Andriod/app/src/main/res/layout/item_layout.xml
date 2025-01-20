@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="10dp">
+
+    <!-- Checkbox for selection -->
+    <CheckBox
+        android:id="@+id/checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"/>
+
+    <!-- Title of the item -->
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Item Title"
+        android:textSize="16sp"
+        android:textStyle="bold"/>
+
+    <!-- Name of the item -->
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Item Name"
+        android:textSize="14sp"/>
+
+    <!-- Edit Icon (can be a pencil icon) -->
+
+    <ImageView
+        android:id="@+id/deleteButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="5dp"
+        android:clickable="true"
+        android:contentDescription="Edit"
+        android:src="@android:drawable/ic_menu_delete"></ImageView>
+    <ImageView
+        android:id="@+id/edit_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/edit_icon"
+        android:contentDescription="Edit"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="5dp"
+        android:clickable="true"/>
+
+    <!-- Download Icon -->
+    <ImageView
+        android:id="@+id/download_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/download_icon"
+        android:contentDescription="Download"
+        android:clickable="true"/>
+</LinearLayout>

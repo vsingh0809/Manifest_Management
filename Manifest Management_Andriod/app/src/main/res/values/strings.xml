@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Manifest Management</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string-array name="gender">
+        <item>Choose Gender</item>
+        <item>Male</item>
+        <item>Female</item>
+        <item>Other</item>
+    </string-array>
+
+    <string-array name="filter_options">
+        <item>ID</item>
+        <item>Name</item>
+    </string-array>
+
+    <string name="cancel">Cancel</string>
+    <string name="preview_description">Camera preview for scanning barcodes</string>
+    <string name="barcode_frame_description">Overlay for aligning barcodes</string>
+</resources>

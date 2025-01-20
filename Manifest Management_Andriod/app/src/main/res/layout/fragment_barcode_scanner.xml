@@ -1,0 +1,35 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Fragment.BarcodeScannerFragment">
+
+    <!-- Camera Preview (Smaller View in the Center of the Screen) -->
+    <androidx.camera.view.PreviewView
+        android:id="@+id/previewView"
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        android:background="@android:color/black"
+        android:contentDescription="@string/preview_description"
+        tools:ignore="MissingClass" />
+
+    <!-- Barcode Frame Overlay (Optional for styling purposes) -->
+    <View
+        android:id="@+id/overlay"
+        android:layout_width="280dp"
+        android:layout_height="180dp"
+        android:layout_gravity="center"
+        android:background="@drawable/barcode_frame"
+        android:contentDescription="@string/barcode_frame_description" />
+
+    <!-- Cancel Button (Placed at the Bottom of the Screen) -->
+    <Button
+        android:id="@+id/btnCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cancel"
+        android:layout_gravity="bottom|center"
+        android:layout_margin="16dp" />
+</FrameLayout>
